@@ -1,0 +1,4 @@
+<view class="container">
+tab
+{{text}}
+</view>
