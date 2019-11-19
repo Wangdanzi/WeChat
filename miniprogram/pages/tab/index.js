@@ -1,10 +1,14 @@
 // pages/tab/index.js
 var common = require('./../common/common.js')
 Page({
-
   data: { //页面的初始数据
-    
-    text: "This is page data."
+    text: "Cind",
+    data:[1,2,3,4,5],
+    item: {
+      index: 0,
+      msg: 'this is a template',
+      time: '2016-09-15'
+    }
   },
   helloMINA () {
     common.sayHello('MINA')

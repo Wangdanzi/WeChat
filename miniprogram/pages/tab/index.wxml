@@ -1,4 +1,18 @@
-<view class="container">
-tab
-{{text}}
-</view>
+<include src="../common/common.wxml"/>
+<import src="./common.wxml"/>
+
+<view class="container">数据绑定 {{text}}</view>
+<view wx:for="{{data}}">列表渲染{{item}}</view>
+<view wx:if="{{text=='Cindy'}}">条件渲染Cindy</view>
+<view wx:else>条件渲染</view>
+<template is="msgItem" data="{{...item}}"/>
+<template>
+  <view> odd </view>
+</template>
+<template>
+  <view> even </view>
+</template>
+
+<block wx:for="{{[1, 2, 3, 4, 5]}}">
+  <template is="{{item % 2 == 0 ? 'even' : 'odd'}}"/>
+</block>
